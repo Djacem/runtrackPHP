@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Maison</title>
+    <style>
+        .maison {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .toit {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid brown;
+            margin-bottom: -1px;
+        }
+
+        .mur {
+            width: 100%;
+            background-color: lightblue;
+            border: 1px solid #000;
+        }
+
+        .porte {
+            width: 20%;
+            height: 30%;
+            background-color: #8B4513;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+
+        .fenetre {
+            width: 30%;
+            height: 30%;
+            background-color: lightyellow;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaire de création d'une maison</h1>
+    <form action="maison.php" method="GET">
+        <label for="largeur">Largeur de la maison :</label>
+        <input type="number" id="largeur" name="largeur" required min="5">
+        <br><br>
+
+        <label for="hauteur">Hauteur de la maison :</label>
+        <input type="number" id="hauteur" name="hauteur" required min="5">
+        <br><br>
+
+        <button type="submit">Afficher la maison</button>
+    </form>
+</body>
+</html>
