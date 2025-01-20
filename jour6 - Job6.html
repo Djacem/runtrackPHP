@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire avec style dynamique</title>
+    <link id="dynamic-style" rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <form action="" method="POST">
+        <label for="style">Choisissez un style :</label>
+        <select name="style" id="style" onchange="changeStyle()">
+            <option value="style1">Style 1</option>
+            <option value="style2">Style 2</option>
+            <option value="style3">Style 3</option>
+        </select>
+        <button type="submit">Soumettre</button>
+    </form>
+
+    <script>
+        function changeStyle() {
+            const style = document.getElementById('style').value;
+            const link = document.getElementById('dynamic-style');
+            link.href = style + '.css';
+        }
+    </script>
+
+</body>
+</html>
